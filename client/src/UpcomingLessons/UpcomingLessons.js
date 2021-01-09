@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import fakeLessons from "../fakeLessons.json"
+
 import LessonsTable from "./LessonsTable"
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
