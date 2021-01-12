@@ -33,6 +33,8 @@ CREATE TABLE lesson (
   week_number       VARCHAR(30) NOT NULL,
   content           VARCHAR(220) NOT NULL,
   syllabus_link     VARCHAR(220) NOT NULL,
+  start_time        time NOT NULL,                  // Patrick Chan
+  end_time          time NOT NULL,                  // Patrick Chan
   module_id         INT REFERENCES module(id)
 );
 
@@ -45,6 +47,7 @@ CREATE TABLE lesson_role (
 CREATE TABLE lesson_role_link (
   id                SERIAL PRIMARY KEY,
   capacity          VARCHAR(30) NOT NULL,
+  vacancies          VARCHAR(30) NOT NULL,            // Patrick Chan
   lesson_id         INT REFERENCES lesson(id),
   lesson_role_id    INT REFERENCES lesson_role(id)
 );
