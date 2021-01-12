@@ -95,6 +95,24 @@ router.get("/lesson", async (req, res) => {
 	}
 });
 
+router.get("/LessonPage/:lessonId", async (req, res) => {
+	try {
+		const lessonId = req.params.lessonId;
+		let query = `SELECT module.name, cohort_lesson_link.start_date, syllabus_link, users.first_name, users.last_name, start_time, end_time, week_number, lesson_role.name, lesson_role_link.capacity, lesson_role_link.vacancies FROM Lesson
+					INNER JOIN module ON module.id=lesson.module_id
+					INNER JOIN cohort_lesson_link ON cohort_lesson_link.lesson_id=lesson.id
+					INNER JOIN users ON users.id=cohort_lesson_user_link.users_id
+					INNER JOIN lesson_role_link ON lesson_role_link.lesson_id=lesson.id
+					INNER JOIN lesson_role ON lesson_role.id=lesson_role_link.lesson_role_id					
+					WHERE id = ${lessonId}`;
+
+		pool
+			.query(query)
+			.then((result) => res.json(result.rows))
+			.catch((e) => console.error(e));
+	}
+});
+
 router.get("/lesson_role", async (req, res) => {
 	try {
 		const results = await pool.query(
