@@ -8,29 +8,26 @@ import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
-      <div>
+    <div>
       <Header/>
       <Link to="/RegisterPage">
-      <RegisterButton/>
+        <RegisterButton/>
       </Link>
       <Link to="/LogInPage">
-      <LogInButton/>
+        <LogInButton/>
       </Link>
-        <div className="landingPageBackground">
-          <div className="titleLP">
-            
-            <div className="mainTitleLP">
-           
-    <strong >Volunteer with CodeYourFuture</strong>
-</div>
-    <img className="imageLP" src={Home_Page}></img>
-</div>
- <div className="subTitleLP">Together, we can help disadvantaged adults find meaningful work.</div>
-     
+      <div className="landingPageBackground">
+        <div className="titleLP">
+          <div className="mainTitleLP">
+            <strong >Volunteer with CodeYourFuture</strong>
+          </div>
+          <img className="imageLP" src={Home_Page}></img>
+        </div>
+        <div className="subTitleLP">Together, we can help disadvantaged adults find meaningful work.</div>
       </div>
      
       <Footer/>
-      </div>
+    </div>
   )
 };
 
