@@ -1,15 +1,13 @@
 import React from "react"
 import moment from 'moment';
 
-
 const VolunteersTable = ({el,RolesButtonHandler}) =>{
     
- const currentDate = moment().format("DD MM YY");
+const currentDate = moment().format("DD MM YY");
    
+  return(
 
-   return(
-   
-<tr>
+    <tr>
       <td>{el.id}</td>
       <td>{el.module}</td>
       <td>{el.Lesson}</td>
@@ -17,9 +15,8 @@ const VolunteersTable = ({el,RolesButtonHandler}) =>{
       <td>{el.Time}</td>
       <td><button type="button" class="nav_Home rolesBTN"  onClick={()=>RolesButtonHandler(el.id)}>View Details</button></td> 
     </tr>
-        
 
-    );
+  );
 }
 
  
