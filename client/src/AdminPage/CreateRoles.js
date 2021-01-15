@@ -28,17 +28,17 @@ const CreateRoles = () => {
   //function and validations logic implemented on create class button
   function SubmitButton() {
     if (
-      !(leadTeacherQuantity < -1) &&
+      !(leadTeacherQuantity <= -1) &&
       !(leadTeacherQuantity > 10) &&
-      !(assistantLeadTeacherQuantity < -1) &&
+      !(assistantLeadTeacherQuantity <= -1) &&
       !(assistantLeadTeacherQuantity > 10) &&
-      !(teachingAssistantQuantity < -1) &&
+      !(teachingAssistantQuantity <= -1) &&
       !(teachingAssistantQuantity > 10) &&
-      !(coordinatorQuantity < -1) &&
+      !(coordinatorQuantity <= -1) &&
       !(coordinatorQuantity > 10) &&
-      !(zoomMasterQuantity < -1) &&
+      !(zoomMasterQuantity <= -1) &&
       !(zoomMasterQuantity > 10) &&
-      !(personalDevelopmentQuantity < -1) &&
+      !(personalDevelopmentQuantity <= -1) &&
       !(personalDevelopmentQuantity > 10) &&
       cohort &&
       module &&
