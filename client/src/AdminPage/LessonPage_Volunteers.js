@@ -1,15 +1,14 @@
 import React from "react";
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 
 const LessonPage_Volunteers = ({ lessonId }) => {
-  //state variables created
+    //state variables created
   const [lessons, setLessons] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
-//fetch the api
+ //fetching the api
   const fetchData = async () => {
     try {
       const response = await fetch(
