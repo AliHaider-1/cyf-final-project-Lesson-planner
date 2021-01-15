@@ -148,7 +148,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Lead Teacher </label>
-              <label className="lt"> {leadTeacher}</label>
+              <label className="lt"> {leadTeacher-leadLength.length}</label>
             </div>
             <div className="form-check">
               <input
@@ -164,7 +164,7 @@ const AvailableRoles = ({
               <label className="form-check-label">
                 Assistant Lead Teacher{" "}
               </label>
-              <label className="alt">{assistantLeadTeacher}</label>
+              <label className="alt">{assistantLeadTeacher-assistLeadLength.length}</label>
             </div>
             <div className="form-check">
               <input
@@ -178,7 +178,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Teaching Assistant </label>
-              <label className="ta">{teachingAssistant}</label>
+              <label className="ta">{teachingAssistant-teachLength.length}</label>
             </div>
           </div>
           <div className="col mx-4">
@@ -194,7 +194,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Coordinator </label>
-              <label className="c"> {coordinator}</label>
+              <label className="c"> {coordinator-coLength.length}</label>
             </div>
             <div className="form-check ">
               <input
@@ -208,7 +208,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Zoom Master (Host) </label>
-              <label className="zm">{zoomMaster}</label>
+              <label className="zm">{zoomMaster-zoLength.length}</label>
             </div>
             <div className="form-check">
               <input
@@ -224,7 +224,7 @@ const AvailableRoles = ({
               <label className="form-check-label">
                 Personal Development Rep{" "}
               </label>{" "}
-              <label className="pd">{personalDevelopment}</label>
+              <label className="pd">{personalDevelopment-perLength.length}</label>
             </div>
           </div>
         </div>
