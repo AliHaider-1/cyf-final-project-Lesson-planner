@@ -4,6 +4,7 @@ import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Admin_Page from "../Images/Admin_Page.jpg";
 import { Link } from "react-router-dom";
+import CYF_Brand from "../Images/cyf_brand.png";
 import { useEffect, useState } from "react";
 
 const AdminPage = ({ RolesButtonHandler }) => {
@@ -28,7 +29,11 @@ const AdminPage = ({ RolesButtonHandler }) => {
 
   return (
     <div>
-      <Header />
+      <div className="navigation">
+        <a href="/">
+          <img className="logo" src={CYF_Brand} alt="CodeYourFuture logo" />
+        </a>
+      </div>
 
       <img className="imgAdmin d-inline" src={Admin_Page}></img>
 
