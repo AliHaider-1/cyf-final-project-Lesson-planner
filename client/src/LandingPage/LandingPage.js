@@ -1,7 +1,6 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import CYF_Brand from "../Images/cyf_brand.png";
-import title2 from "../Images/title2.png"
 import Header from "../Header/Header";
 import VolunteerButton from "../VolunteerButton/VolunteerButton";
 import RegisterButton from "../RegisterButton/RegisterButton";
@@ -14,7 +13,6 @@ const LandingPage = () => {
         <a href="/">
           <img className="logo" src={CYF_Brand} alt="CodeYourFuture logo" />
         </a>
-        <img className="title" src={title2}></img>
       </div>
       <Link to="/UpcomingLessons">
         <VolunteerButton />
