@@ -13,9 +13,6 @@ const Header = () => {
         <img className="logo" src={CYF_Brand} alt="CodeYourFuture logo" />
         <strong className="nav_Home">Home</strong>{" "}
       </a>
-      <Link to="/AdminPage">
-        <strong className="nav_Home ml-2">Admin Side</strong>
-      </Link>
     </div>
   );
 };
