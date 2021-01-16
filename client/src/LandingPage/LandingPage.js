@@ -1,19 +1,21 @@
 import React from "react";
 import Footer from "../Footer/Footer";
+import CYF_Brand from "../Images/cyf_brand.png";
 import Header from "../Header/Header";
-import LogInButton from "../LoginButton/LogInButton";
+import VolunteerButton from "../VolunteerButton/VolunteerButton";
 import RegisterButton from "../RegisterButton/RegisterButton";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
   return (
     <div className="backgroundImage">
-      <Header />
-      <Link to="/RegisterPage">
-        <RegisterButton />
-      </Link>
-      <Link to="/LogInPage">
-        <LogInButton />
+      <div className="navigation">
+        <a href="/">
+          <img className="logo" src={CYF_Brand} alt="CodeYourFuture logo" />
+        </a>
+      </div>
+      <Link to="/UpcomingLessons">
+        <VolunteerButton />
       </Link>
       <div className="landingPageBackground">
         <div className="titleLP">
