@@ -34,7 +34,7 @@ const LessonsTable = ({ el }) => {
           }}
         >
           <button type="button" className="nav_Home rolesBTN">
-            View Vacancies
+            Select Class
           </button>
         </Link>
       </td>
