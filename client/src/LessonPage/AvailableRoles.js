@@ -148,7 +148,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Lead Teacher </label>
-              <label className="lt"> {leadTeacher-leadLength.length}</label>
+              <label className="lt"> {leadTeacher - leadLength.length}</label>
             </div>
             <div className="form-check">
               <input
@@ -164,7 +164,9 @@ const AvailableRoles = ({
               <label className="form-check-label">
                 Assistant Lead Teacher{" "}
               </label>
-              <label className="alt">{assistantLeadTeacher-assistLeadLength.length}</label>
+              <label className="alt">
+                {assistantLeadTeacher - assistLeadLength.length}
+              </label>
             </div>
             <div className="form-check">
               <input
@@ -178,7 +180,9 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Teaching Assistant </label>
-              <label className="ta">{teachingAssistant-teachLength.length}</label>
+              <label className="ta">
+                {teachingAssistant - teachLength.length}
+              </label>
             </div>
           </div>
           <div className="col mx-4">
@@ -194,7 +198,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Coordinator </label>
-              <label className="c"> {coordinator-coLength.length}</label>
+              <label className="c"> {coordinator - coLength.length}</label>
             </div>
             <div className="form-check ">
               <input
@@ -208,7 +212,7 @@ const AvailableRoles = ({
                 required
               />
               <label className="form-check-label">Zoom Master (Host) </label>
-              <label className="zm">{zoomMaster-zoLength.length}</label>
+              <label className="zm">{zoomMaster - zoLength.length}</label>
             </div>
             <div className="form-check">
               <input
@@ -224,7 +228,9 @@ const AvailableRoles = ({
               <label className="form-check-label">
                 Personal Development Rep{" "}
               </label>{" "}
-              <label className="pd">{personalDevelopment-perLength.length}</label>
+              <label className="pd">
+                {personalDevelopment - perLength.length}
+              </label>
             </div>
           </div>
         </div>
@@ -272,14 +278,18 @@ const AvailableRoles = ({
               </button>
             </div>
             <div className="modal-body">
-              You have successfully signed up for class. Thanks
+              You have successfully signed up for class. Thank You !
             </div>
             <div className="modal-footer">
               <button
                 type="button"
                 className="btn btn-success"
                 data-dismiss="modal"
-                onClick={() => window.location.reload()}
+                onClick={() =>
+                  window.location.replace(
+                    "https://cyf-finalproject-class-planner.herokuapp.com/UpcomingLessons"
+                  )
+                }
               >
                 OK
               </button>
