@@ -332,17 +332,21 @@ const CreateRoles = () => {
               </button>
             </div>
             <div className="modal-body">
-              You have successfully created the class. Thanks
-            </div>
-            <div className="modal-footer">
-              <button
-                type="button"
-                className="btn btn-success"
-                data-dismiss="modal"
-                onClick={() => window.location.reload()}
-              >
-                OK
-              </button>
+              You have successfully created the class. Thank You !
+              <div className="modal-footer">
+                <button
+                  type="button"
+                  className="btn btn-success"
+                  data-dismiss="modal"
+                  onClick={() =>
+                    window.location.replace(
+                      "https://cyf-finalproject-class-planner.herokuapp.com/AdminPage"
+                    )
+                  }
+                >
+                  OK
+                </button>
+              </div>
             </div>
           </div>
         </div>

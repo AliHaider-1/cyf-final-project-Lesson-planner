@@ -1,39 +1,64 @@
+// Database Relations
 
-CREATE TABLE users (
-  id                SERIAL PRIMARY KEY,
-  first_name        VARCHAR(30) NOT NULL,
-  last_name         VARCHAR(30) NOT NULL,
-  email             VARCHAR(120) NOT NULL,
-  admin             VARCHAR(120) NOT NULL
-);
+                       List of relations
+ Schema |           Name           |   Type   |     Owner
+--------+--------------------------+----------+----------------
+ public | lesson                   | table    | hjybougwxuoeaj
+ public | lesson_id_seq            | sequence | hjybougwxuoeaj
+ public | signed_volunteers        | table    | hjybougwxuoeaj
+ public | signed_volunteers_id_seq | sequence | hjybougwxuoeaj
+ public | users                    | table    | hjybougwxuoeaj
+ public | users_id_seq             | sequence | hjybougwxuoeaj
+(6 rows)
+
+// Table Lesson
+
+                                           Table "public.lesson"
+        Column        |          Type          | Collation | Nullable |              Default
+----------------------+------------------------+-----------+----------+------------------------------------
+ id                   | integer                |           | not null | nextval('lesson_id_seq'::regclass)
+ week_number          | character varying(30)  |           | not null |
+ syllabus_link        | character varying(220) |           | not null |
+ date                 | date                   |           |          |
+ starttime            | time without time zone |           |          |
+ endtime              | time without time zone |           |          |
+ leadteacher          | integer                |           |          |
+ assistantleadteacher | integer                |           |          |
+ teachingassistant    | integer                |           |          |
+ coordinator          | integer                |           |          |
+ zoommaster           | integer                |           |          |
+ personaldevelopment  | integer                |           |          |
+ module               | character varying(220) |           |          |
+ cohort               | character varying(220) |           |          |
+Indexes:
+    "lesson_pkey" PRIMARY KEY, btree (id)
+
+// Table signed_volunteers
+
+                                   Table "public.signed_volunteers"
+  Column   |          Type          | Collation | Nullable |                    Default
+-----------+------------------------+-----------+----------+-----------------------------------------------
+ full_name | character(220)         |           |          |
+ lesson_id | integer                |           |          |
+ role_id   | character(220)         |           |          |
+ id        | integer                |           | not null | nextval('signed_volunteers_id_seq'::regclass)
+ email     | character varying(220) |           |          |
+Indexes:
+    "signed_volunteers_pkey" PRIMARY KEY, btree (id)
 
 
-CREATE TABLE lesson (
-  id                SERIAL PRIMARY KEY,
-  week_number       VARCHAR(30) NOT NULL,
-  content           VARCHAR(220) NOT NULL,
-  syllabus_link     VARCHAR(220) NOT NULL,
-  module_id         INT REFERENCES module(id)
-);
+\\ Table Users
 
-
-
-
-
-
-
-
-
-
-/// all 3 database tables are created.
-
-
-
-//insert data into table users //independent table
-INSERT INTO users (first_name, last_name, email, admin) VALUES ('Ali','Haider','alihaider@gmail.com','CodeYourFuture');
-
-
-//insert data into lesson  //dependent table
-
+                                      Table "public.users"
+   Column   |          Type          | Collation | Nullable |              Default
+------------+------------------------+-----------+----------+-----------------------------------
+ id         | integer                |           | not null | nextval('users_id_seq'::regclass)
+ first_name | character varying(200) |           | not null |
+ last_name  | character varying(200) |           | not null |
+ email      | character varying(200) |           | not null |
+ password   | character varying(200) |           | not null |
+Indexes:
+    "users_pkey" PRIMARY KEY, btree (id)
+    "users_email_key" UNIQUE CONSTRAINT, btree (email)
 
 

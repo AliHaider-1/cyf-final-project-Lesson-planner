@@ -67,7 +67,7 @@ const LessonsTable = ({ el }) => {
               </button>
             </div>
             <div className="modal-body">
-              You have successfully deleted the class. Thanks
+              You have successfully deleted the class. Thank You !
             </div>
             <div className="modal-footer">
               <button

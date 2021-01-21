@@ -1,9 +1,7 @@
 import React from "react";
 import Footer from "../Footer/Footer";
 import CYF_Brand from "../Images/cyf_brand.png";
-import Header from "../Header/Header";
 import VolunteerButton from "../VolunteerButton/VolunteerButton";
-import RegisterButton from "../RegisterButton/RegisterButton";
 import { Link } from "react-router-dom";
 
 const LandingPage = () => {
