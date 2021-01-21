@@ -8,6 +8,7 @@ import LessonPage_Info from "./LessonPage_Info";
 import Footer from "../Footer/Footer";
 import { useLocation } from "react-router-dom";
 import VolunteersTable from "./VolunteersTable";
+import { Link } from "react-router-dom";
 
 const AdminLessonPage = () => {
   //created to access the state variables  from lessons table
