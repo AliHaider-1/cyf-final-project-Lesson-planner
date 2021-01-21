@@ -30,7 +30,7 @@ const AdminPage = ({ RolesButtonHandler }) => {
   return (
     <div>
       <div className="navigation">
-        <a href="/">
+        <a href="/AdminPage">
           <img className="logo" src={CYF_Brand} alt="CodeYourFuture logo" />
         </a>
       </div>
