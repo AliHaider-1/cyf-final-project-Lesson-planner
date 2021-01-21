@@ -21,7 +21,12 @@ const AdminLessonPage = () => {
 
   return (
     <div className="App">
-      <Header />
+      <div className="navigation">
+        <Link to="/AdminPage">
+          <img className="logo" src={CYF_Brand} alt="CodeYourFuture logo" />
+          <strong className="nav_Home">Home</strong>{" "}
+        </Link>
+      </div>
       <LessonPage_Info
         lessonId={lessonId}
         lesson={lesson}
