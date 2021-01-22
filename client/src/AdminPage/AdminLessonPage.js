@@ -2,8 +2,7 @@ import React from "react";
 
 // import bootstrap css file here
 import "bootstrap/dist/css/bootstrap.min.css";
-
-import Header from "../Header/Header";
+import CYF_Brand from "../Images/cyf_brand.png";
 import LessonPage_Info from "./LessonPage_Info";
 import Footer from "../Footer/Footer";
 import { useLocation } from "react-router-dom";
