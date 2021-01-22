@@ -1,6 +1,5 @@
 import React from "react";
 import LessonsTable from "./LessonsTable";
-import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import Admin_Page from "../Images/Admin_Page.jpg";
 import { Link } from "react-router-dom";
